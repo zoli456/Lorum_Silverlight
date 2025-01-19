@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94F27344-0C94-4793-9BFC-6172A34766DA}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lorum_Silverlight</RootNamespace>
+    <AssemblyName>Lorum Silverlight</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Lórum Silverlight.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Lórum_Silverlight.App</SilverlightAppEntry>
+    <TestPageFileName>Lórum_SilverlightTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="SilverlightMessageBoxes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\Debug\SilverlightMessageBoxes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Computer.xaml.cs">
+      <DependentUpon>Computer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Computer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\02001_resistance_1024x768.jpg" />
+    <Resource Include="Images\bellas-praderas-1474_1024x576.jpg" />
+    <Resource Include="Images\DSC05463_1024x576.JPG" />
+    <Resource Include="Images\Győzelem.png" />
+    <Resource Include="Images\Leforditott.jpg" />
+    <Resource Include="Images\Let-it-Fly-vector-1024x576.jpg" />
+    <Resource Include="Images\Lórum jó.png" />
+    <Resource Include="Images\Lórum rossz.png" />
+    <Resource Include="Images\makk alsó_148x240.jpg" />
+    <Resource Include="Images\makk csikó_147x240.jpg" />
+    <Resource Include="Images\makk felső_148x240.jpg" />
+    <Resource Include="Images\makk hetes_148x240.jpg" />
+    <Resource Include="Images\makk kilences_148x240.jpg" />
+    <Resource Include="Images\makk nyolcas_148x240.jpg" />
+    <Resource Include="Images\makk tizes_148x240.jpg" />
+    <Resource Include="Images\makk ász_147x240.jpg" />
+    <Resource Include="Images\nyíl 2.png" />
+    <Resource Include="Images\nyíl 3.png" />
+    <Resource Include="Images\nyíl 4.png" />
+    <Resource Include="Images\nyíl.png" />
+    <Resource Include="Images\piros alsó_145x240.jpg" />
+    <Resource Include="Images\piros csikó_145x240.jpg" />
+    <Resource Include="Images\piros felső_145x240.jpg" />
+    <Resource Include="Images\piros hetes_146x240.jpg" />
+    <Resource Include="Images\piros kilences_146x240.jpg" />
+    <Resource Include="Images\piros nyolcas_144x240.jpg" />
+    <Resource Include="Images\piros tizes_152x240.jpg" />
+    <Resource Include="Images\piros ász_145x240.jpg" />
+    <Resource Include="Images\tök alsó_147x240.jpg" />
+    <Resource Include="Images\tök csikó_147x240.jpg" />
+    <Resource Include="Images\tök felső_147x240.jpg" />
+    <Resource Include="Images\tök hetes_147x240.jpg" />
+    <Resource Include="Images\tök kilences_147x240.jpg" />
+    <Resource Include="Images\tök nyolcas_147x240.jpg" />
+    <Resource Include="Images\tök tizes_147x240.jpg" />
+    <Resource Include="Images\tök ász_148x240.jpg" />
+    <Resource Include="Images\Vereség.png" />
+    <Resource Include="Images\zöld alsó_145x240.jpg" />
+    <Resource Include="Images\zöld csikó_145x240.jpg" />
+    <Resource Include="Images\zöld felső_145x240.jpg" />
+    <Resource Include="Images\zöld hetes_146x240.jpg" />
+    <Resource Include="Images\zöld kilences_147x240.jpg" />
+    <Resource Include="Images\zöld nyolcas_147x240.jpg" />
+    <Resource Include="Images\zöld tizes_145x240.jpg" />
+    <Resource Include="Images\zöld ász_147x240.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
